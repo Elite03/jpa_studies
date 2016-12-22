@@ -35,5 +35,6 @@
 		<module>many-to-many</module>
 		<module>unidirectional-collection-mapping_using-tables</module>
 		<module>Embedded-Objects</module>
+		<module>Relationships-and-Element-Collections</module>
 	</modules>
 </project>
