@@ -1,0 +1,6 @@
+/home/dev/workspace/jpa_demo-parent/one-to-one_bi-directional/src/main/java/com/client/ParkingClient.java
+/home/dev/workspace/jpa_demo-parent/one-to-one_bi-directional/src/main/java/com/model/ParkingSpace.java
+/home/dev/workspace/jpa_demo-parent/one-to-one_bi-directional/src/main/java/com/model/Employee.java
+/home/dev/workspace/jpa_demo-parent/one-to-one_bi-directional/src/main/java/com/service/ParkingService.java
+/home/dev/workspace/jpa_demo-parent/one-to-one_bi-directional/src/main/java/com/client/EmployeeClient.java
+/home/dev/workspace/jpa_demo-parent/one-to-one_bi-directional/src/main/java/com/service/EmployeeService.java

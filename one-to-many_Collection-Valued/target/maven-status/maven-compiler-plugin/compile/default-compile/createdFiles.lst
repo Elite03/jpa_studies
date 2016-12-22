@@ -1,0 +1,6 @@
+com/client/EmployeeClient.class
+com/service/EmployeeService.class
+com/service/DepartmentService.class
+com/model/Department.class
+com/client/DepartmentClient.class
+com/model/Employee.class
