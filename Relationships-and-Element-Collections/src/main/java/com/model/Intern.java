@@ -13,32 +13,31 @@ import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "employee")
-public class Employee {
+@Table(name = "intern")
+public class Intern {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(name = "id")
 	private int id;
 
-	@Column(name = "employeeName")
-	private String employeeName;
+	@Column(name = "internName")
+	private String internName;
 
 	@ElementCollection(targetClass = VacationEntry.class)
-	@CollectionTable(name = "employee_vacations", joinColumns = @JoinColumn(name = "employee_id"))
+	@CollectionTable(name = "interns_vacations", joinColumns = @JoinColumn(name = "intern_id"))
 	private Collection<VacationEntry> vacationEntries;
 
 	@ElementCollection
-	@CollectionTable(name = "employee_nicknames", joinColumns = @JoinColumn(name = "employee_id"))
+	@CollectionTable(name = "intern_nicknames", joinColumns = @JoinColumn(name = "intern_id"))
 	@Column(name = "nickname")
-	private Collection<String> nickNames;
+	private Collection<String> nickName;
 
-	public Employee() {
-
+	public Intern() {
 	}
 
-	public Employee(String employeeName) {
-		this.employeeName = employeeName;
+	public Intern(String internName) {
+		this.internName = internName;
 	}
 
 	public int getId() {
@@ -49,12 +48,12 @@ public class Employee {
 		this.id = id;
 	}
 
-	public String getEmployeeName() {
-		return employeeName;
+	public String getInternName() {
+		return internName;
 	}
 
-	public void setEmployeeName(String employeeName) {
-		this.employeeName = employeeName;
+	public void setInternName(String internName) {
+		this.internName = internName;
 	}
 
 	public Collection<VacationEntry> getVacationEntries() {
@@ -65,12 +64,12 @@ public class Employee {
 		this.vacationEntries = vacationEntries;
 	}
 
-	public Collection<String> getNickNames() {
-		return nickNames;
+	public Collection<String> getNickName() {
+		return nickName;
 	}
 
-	public void setNickNames(Collection<String> nickNames) {
-		this.nickNames = nickNames;
+	public void setNickName(Collection<String> nickName) {
+		this.nickName = nickName;
 	}
 
 }

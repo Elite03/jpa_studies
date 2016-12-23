@@ -11,6 +11,7 @@ import javax.persistence.TemporalType;
 public class VacationEntry {
 
 	@Temporal(TemporalType.DATE)
+	@Column(name = "startday")
 	private Calendar startDay;
 
 	@Column(name = "days")
