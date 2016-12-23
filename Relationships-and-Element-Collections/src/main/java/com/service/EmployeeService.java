@@ -23,4 +23,15 @@ public class EmployeeService {
 		return employee;
 	}
 
+	public void readEmployee() {
+		entityManager.getTransaction().begin();
+		Employee employee = entityManager.find(Employee.class, 1);
+		for (VacationEntry v : employee.getVacationEntries()) {
+			System.out.println(
+					String.format("Employee [%s],Holidays [%s]", employee.getEmployeeName(), v.getTotalDays()));
+		}
+		entityManager.getTransaction().commit();
+		entityManager.close();
+	}
+
 }

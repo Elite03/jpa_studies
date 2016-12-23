@@ -36,5 +36,6 @@
 		<module>unidirectional-collection-mapping_using-tables</module>
 		<module>Embedded-Objects</module>
 		<module>Relationships-and-Element-Collections</module>
+		<module>Keying-By-Basic-Type</module>
 	</modules>
 </project>

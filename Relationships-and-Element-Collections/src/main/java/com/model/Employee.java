@@ -6,6 +6,7 @@ import javax.persistence.CollectionTable;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,7 +25,7 @@ public class Employee {
 	@Column(name = "employeeName")
 	private String employeeName;
 
-	@ElementCollection(targetClass = VacationEntry.class)
+	@ElementCollection(targetClass = VacationEntry.class, fetch = FetchType.LAZY)
 	@CollectionTable(name = "employee_vacations", joinColumns = @JoinColumn(name = "employee_id"))
 	private Collection<VacationEntry> vacationEntries;
 

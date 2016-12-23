@@ -1,5 +1,8 @@
 package com.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.EntityManager;
 
 import com.model.Department;
@@ -13,27 +16,20 @@ public class DepartmentService {
 	}
 
 	public Department create(String deptName) {
-		em.getTransaction().begin();
-		Department department = new DepartmentService(em).findEmployeeByDept(2);
-		em.getTransaction().commit();
-		em.close();
-		System.out.println(department.getDeptName());
+		List<Employee> empList = new ArrayList<>();
+		Department department = new Department(deptName);
 		Employee pankaj = new Employee("Pankaj");
-		pankaj.setDepartment(department);
-
 		Employee manpreet = new Employee("Manpreet");
+		pankaj.setDepartment(department);
 		manpreet.setDepartment(department);
-		em.persist(manpreet);
-		em.persist(pankaj);
+		empList.add(manpreet);
+		empList.add(pankaj);
+		department.setEmployees(empList);
 		em.persist(department);
 		return department;
 	}
 
 	public Department findEmployeeByDept(int deptId) {
-		em.getTransaction().begin();
-		Department department = em.find(Department.class, deptId);
-		em.getTransaction().commit();
-		em.close();
-		return department;
+		return em.find(Department.class, deptId);
 	}
 }

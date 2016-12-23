@@ -18,7 +18,7 @@ public class Department {
 
 	private String deptName;
 
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "department")
 	private Collection<Employee> employees;
 
 	public Department() {

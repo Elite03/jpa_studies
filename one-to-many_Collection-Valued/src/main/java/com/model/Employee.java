@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OrderColumn;
 
 @Entity
 public class Employee {
@@ -15,7 +16,7 @@ public class Employee {
 	private int id;
 	private String empName;
 
-	@JoinColumn
+	// @JoinColumn
 	@ManyToOne(cascade = CascadeType.ALL)
 	private Department department;
 

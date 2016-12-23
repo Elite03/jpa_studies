@@ -3,7 +3,6 @@ package com.app.client;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import java.util.spi.CalendarNameProvider;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
@@ -54,10 +53,12 @@ public class ApplicationClient {
 	public static void main(String[] args) {
 		EntityManager entityManager = Persistence.createEntityManagerFactory("Relationships-and-Element-Collections")
 				.createEntityManager();
-		InternService internService = new InternService(entityManager);
+		// InternService internService = new InternService(entityManager);
 		EmployeeService employeeService = new EmployeeService(entityManager);
-		ApplicationClient client = new ApplicationClient();
-		client.createApplication(entityManager, employeeService, internService);
+		// ApplicationClient client = new ApplicationClient();
+		// client.createApplication(entityManager, employeeService,
+		// internService);
+		employeeService.readEmployee();
 
 	}
 }
